@@ -1,8 +1,12 @@
+import StyledGoal from '../styles/StyledGoal';
+
 const Goal = ({ goal, updates }) => {
   return (
-    <div>
+    <StyledGoal>
       <label>
+        {' '}
         <input type='checkbox' disabled defaultChecked={goal.fields.complete} />
+        <span />
       </label>
       <h2>{goal.fields.title}</h2>
       <div>
@@ -13,7 +17,7 @@ const Goal = ({ goal, updates }) => {
           <p key={i}>{update.fields.update}</p>
         ))}
       </div>
-    </div>
+    </StyledGoal>
   );
 };
 
